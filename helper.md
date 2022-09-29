@@ -42,8 +42,8 @@ docker-compose up --build local-runner
 # list the uprunning containers:
 docker container ls
 
-# stop the containers:
-
+# stop the containers: (if your computer is fanning out and you hate it)
+docker container stop docker_postgres_1 docker_local-runner_1
 
 # remove the containers: (normally we don't need to remove)
 docker container rm `docker container ls -a|grep mwaa|awk '{print $1}'`
