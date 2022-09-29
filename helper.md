@@ -3,8 +3,22 @@
 ## Requirements
 
 - minimum 3~4GB memory setting for Docker
-- local copy of `nurx-daga-dags` repo
+- local copy of `nurx-data-dags` repo
 - local .env file in `docker` directory. (can fetch from [1password](https://my.1password.com/vaults/q53fddt66zfb7dwjqsilk2i3ee/allitems/u2yh2okx2veshij66rpo56qk5m), named `Airflow MWAA .env`)
+
+The requirement.txt worked for me is(should be in `nurx-data-dags/requirements.txt`): (very identical to the main branch)
+```
+s3fs==0.4.0
+splunk-sdk==1.6.16
+apache-airflow-backport-providers-google
+shippo==2.0.2
+sqlanydb==1.0.11
+psycopg2-binary==2.9.3
+sqlalchemy-redshift==0.4.0
+SQLAlchemy
+paramiko
+protobuf~=3.20.0
+```
 
 ## To Bring Up the Env
 
