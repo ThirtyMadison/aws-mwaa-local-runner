@@ -7,12 +7,7 @@ FROM amazonlinux
 LABEL maintainer="amazon"
 
 # Airflow
-## Version specific ARGs
-ARG AIRFLOW_VERSION=2.2.2
-ARG WATCHTOWER_VERSION=2.0.1
-ARG PROVIDER_AMAZON_VERSION=2.4.0
-
-## General ARGs
+ARG AIRFLOW_VERSION=1.10.12
 ARG AIRFLOW_USER_HOME=/usr/local/airflow
 ARG AIRFLOW_DEPS=""
 ARG PYTHON_DEPS=""
@@ -22,14 +17,11 @@ ENV AIRFLOW_HOME=${AIRFLOW_USER_HOME}
 
 COPY script/bootstrap.sh /bootstrap.sh
 COPY script/systemlibs.sh /systemlibs.sh
-COPY script/generate_key.sh /generate_key.sh
 COPY config/constraints.txt /constraints.txt
 COPY config/requirements.txt /requirements.txt
-COPY config/mwaa-base-providers-requirements.txt /mwaa-base-providers-requirements.txt
 
 RUN chmod u+x /systemlibs.sh && /systemlibs.sh
 RUN chmod u+x /bootstrap.sh && /bootstrap.sh
-RUN chmod u+x /generate_key.sh && /generate_key.sh
 
 # Post bootstrap to avoid expensive docker rebuilds
 COPY script/entrypoint.sh /entrypoint.sh

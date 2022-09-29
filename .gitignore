@@ -3,4 +3,7 @@
 dags/**/*.pyc
 /.idea
 /logs
-/db-data
+db-data/*
+docker/db-data/*
+.env
+.DS_Store
