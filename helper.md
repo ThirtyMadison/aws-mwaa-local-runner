@@ -6,19 +6,9 @@
 - local copy of `nurx-data-dags` repo
 - local .env file in `docker` directory. (can fetch from [1password](https://my.1password.com/vaults/q53fddt66zfb7dwjqsilk2i3ee/allitems/u2yh2okx2veshij66rpo56qk5m), named `Airflow MWAA .env`)
 
-The requirement.txt worked for me is(should be in `nurx-data-dags/requirements.txt`): (very identical to the main branch)
-```
-s3fs==0.4.0
-splunk-sdk==1.6.16
-apache-airflow-backport-providers-google
-shippo==2.0.2
-sqlanydb==1.0.11
-psycopg2-binary==2.9.3
-sqlalchemy-redshift==0.4.0
-SQLAlchemy
-paramiko
-protobuf~=3.20.0
-```
+> If for whatever reason you see a flooding of errors, it's most likely due to python package dependency issues.
+> In this case, use the `pip_freeze.txt` to replace the `nurx-data-dags/requirements.txt` file to continue. 
+> But be careful of making requirements.txt file changes as it requires restarting production MWAA instance to apply.
 
 ## To Bring Up the Env
 
