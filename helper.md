@@ -22,6 +22,11 @@ protobuf~=3.20.0
 
 ## To Bring Up the Env
 
+The first time to bring up the Env, you need to build the image:
+```
+docker build --rm --compress -t amazon/mwaa-local:1.10 ./docker --no-cache
+```
+
 ```
 cd docker
 docker-compose up
