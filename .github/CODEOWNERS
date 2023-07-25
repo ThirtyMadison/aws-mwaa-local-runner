@@ -1,3 +1,4 @@
+*                     @ThirtyMadison/sre
 .circleci/            @ThirtyMadison/infra
 .github/              @ThirtyMadison/infra
 .infra/               @ThirtyMadison/infra
