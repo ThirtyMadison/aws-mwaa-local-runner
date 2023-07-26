@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  annotations:
+    github.com/project-slug: ThirtyMadison/aws-mwaa-local-runner
+  description: Aws Mwaa Local Runner
+  labels:
+    has_frontend: 'False'
+  links:
+  - icon: github
+    title: Github
+    url: https://github.com/ThirtyMadison/aws-mwaa-local-runner
+  name: aws-mwaa-local-runner
+  tags:
+  - shell
+spec:
+  dependsOn: []
+  lifecycle: production
+  type: service
